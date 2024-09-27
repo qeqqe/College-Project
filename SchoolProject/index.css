@@ -1,0 +1,23 @@
+@keyframes animateNav {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-25px);
+    opacity: 30;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100;
+  }
+}
+
+.nav-bar {
+  animation: animateNav 0.5s ease-out;
+}
+
+@font-face {
+  font-family: gt;
+  src: url("./Charter\ Regular.ttf");
+}

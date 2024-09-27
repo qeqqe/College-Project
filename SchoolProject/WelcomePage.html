@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitkara University Library</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"
+        integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-indigo-900 to-purple-800 min-h-screen text-white">
+    <div
+        class="bg-[url('https://i0.wp.com/boingboing.net/wp-content/uploads/2018/05/cool-background1.png?fit=1&ssl=1&resize=620%2C4000')]  rounded-b-2xl absolute  w-full lg:min-h-[10vh] top-3s bg-cover bg-opacity-20 sm:min-h-[25vh]">
+    </div>
+    <nav id="nav"
+        class="flex nav-bar min-h-[5vh] nav-bar gap-4 text-white backdrop-blur-xl  font-bold text-xl px-[2vw] py-[3vh] bg-opacity-[0.13] rounded-b-2xl">
+        <a href="#"
+            class="py-[1vh] px-[.5vw] bg-black bg-opacity-25 rounded-3xl flex justify-center hover:scale-105 active:scale-95 transition-all duration-300 "><span
+                class="bg-red-500 bg-clip-text text-transparent">Home</span></a>
+        <a href="./Images.html"
+            class="py-[1vh] px-[1vw] bg-black bg-opacity-5 rounded-3xl flex justify-center hover:scale-95 active:scale-[0.85] transition-all duration-300 ">Images</a>
+        <a href="./more.html"
+            class="py-[1vh] px-[1vw] bg-black bg-opacity-5 rounded-3xl  flex justify-center hover:scale-95 active:scale-[0.85] transition-all duration-300">More</a>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <img src="./Chitkara.svg" alt="Chitkara University Logo" class="w-24 h-24 mx-auto mb-4">
+            <h1 class="text-5xl font-bold mb-2">Chitkara University Library</h1>
+            <p class="text-xl text-purple-200">Empowering minds through knowledge and edging</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <section
+                class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-md hover:bg-opacity-30  transition-all border border-white duration-300 shadow-lg hover:shadow-2xl">
+                <h2
+                    class="text-3xl font-semibold mb-4 bg-gradient-to-l from-red-400 to-orange-200 bg-clip-text text-transparent">
+                    About Our
+                    Library</h2>
+                <p class="mb-6 text-purple-100">Chitkara University Library is a state-of-the-art facility designed to
+                    support the
+                    academic and research needs of our students and faculty. With extensive resources and a
+                    comprehensive learning environment, we're here to fuel your academic journey.</p>
+                <div
+                    class="w-full h-48 bg-purple-300 bg-opacity-25 hover:scale-105 transition-all duration-300 rounded-lg overflow-hidden">
+                    <img src="./Lib1.jpeg" alt="Library Interior"
+                        class="w-full h-full object-cover hover:scale-105 transition-all duration-300">
+                </div>
+            </section>
+
+            <section
+                class="bg-white bg-opacity-10 hover:bg-opacity-30 p-8 rounded-lg backdrop-blur-md transition-all border border-white duration-300 shadow-lg hover:shadow-2xl">
+                <h2
+                    class="text-3xl font-semibold mb-4 bg-gradient-to-r from-red-400 to-orange-200 bg-clip-text text-transparent ">
+                    Resources and Services</h2>
+                <ul class="space-y-2 mb-6 text-purple-100 list-disc">
+                    <li> Extensive data access</li>
+                    <li> Quiet study areas and group discussion rooms</li>
+                    <li> Issue books</li>
+                    <li> Research and workshops</li>
+                </ul>
+                <div
+                    class="w-full h-48 bg-purple-300 bg-opacity-25 rounded-lg overflow-hidden hover:scale-105 transition-all duration-300">
+                    <img src="./Lib2.jpeg" alt="Library book"
+                        class="w-full h-full object-cover hover:scale-105 transition-all duration-300">
+                </div>
+            </section>
+        </div>
+
+        <section class="mt-12" x-data="{ open: false }">
+            <button @click="open = !open"
+                class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                Library Hours
+            </button>
+            <div x-show="open" class="mt-4 bg-white bg-opacity-10 text-white p-6 rounded-lg backdrop-blur-md">
+                <h3 class="font-bold text-xl mb-4">Opening Hours:</h3>
+                <p class="mb-2">Monday - Friday: 8:00 AM - 10:00 PM</p>
+                <p class="mb-2">Saturday: 9:00 AM - 5:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-4 text-purple-200">
+        <p>&copy; 2024 Chitkara University Library. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
